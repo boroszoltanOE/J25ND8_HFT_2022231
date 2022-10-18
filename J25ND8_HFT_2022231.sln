@@ -21,6 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J25ND8_HFT_2022231.Test", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J25ND8_HFT_2022231.Models", "J25ND8_HFT_2022231.Models\J25ND8_HFT_2022231.Models.csproj", "{55F311AE-E9DD-4E72-8C8A-7FD4F5B65F74}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{FE2B4499-E9EE-455D-BCEB-95118CFB288C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
