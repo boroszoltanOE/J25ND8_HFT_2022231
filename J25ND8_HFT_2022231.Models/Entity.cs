@@ -10,8 +10,6 @@ namespace J25ND8_HFT_2022231.Models
 {
     public abstract class Entity
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public virtual int Id { get; set; }
     }
 }

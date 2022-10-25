@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace J25ND8_HFT_2022231.Models
 {
+    [Table("passengers")]
     public class Passenger : Entity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("ticket_id", TypeName = "'int")]
+        [Column("passenger_id", TypeName = "'int")]
         public override int Id { get; set; }
         public string Name { get; set; }
         [Required]
