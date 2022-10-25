@@ -19,9 +19,10 @@ namespace J25ND8_HFT_2022231.Models
         public string Type { get; set; }
         public string StartingCountry { get; set; }
         public string Destination { get; set; }
-        [ForeignKey(nameof(Airline))]
-        public Airline Airline { get; set; }
         [NotMapped]
         public ICollection<Passenger> Passengers { get; set; }
+        public Airline Airline { get; set; }
+        [ForeignKey(nameof(Airline))]
+        public int AirlineId { get; set; }
     }
 }

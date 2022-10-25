@@ -19,8 +19,10 @@ namespace J25ND8_HFT_2022231.Models
         [Required]
         public int TicketRow { get; set; }
         [Required]
-        public int TickerColumn { get; set; }
+        public int TicketColumn { get; set; }
+        [NotMapped]
+        public virtual Plane Plane { get; set; }
         [ForeignKey(nameof(Plane))]
-        public Plane Plane { get; set; }
+        public int PlaneId { get; set; }
     }
 }
