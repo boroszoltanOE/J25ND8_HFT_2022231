@@ -65,6 +65,9 @@ namespace J25ND8_HFT_2022231.Repository.Data
             Passenger Mohamed = new Passenger() { Id=5, PlaneId=plane5.Id, Name="Mohamed Salah", TicketColumn = 4, TicketRow = 7};
             Passenger Hamsik = new Passenger() { Id=6, PlaneId=plane6.Id, Name= "Marek Hamšík", TicketColumn = 1, TicketRow = 8};
 
+            modelBuilder.Entity<Airline>().HasData(AfganLine,TurkishAirline,IzraelPlanes);
+            modelBuilder.Entity<Plane>().HasData(plane1, plane2, plane3, plane4, plane5, plane6);
+            modelBuilder.Entity<Passenger>().HasData(Sebastian,Anna, Serena, Benitez, Mohamed, Hamsik);
         }
     }
 }
