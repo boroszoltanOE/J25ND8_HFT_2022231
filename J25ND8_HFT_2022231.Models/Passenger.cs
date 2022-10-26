@@ -15,11 +15,11 @@ namespace J25ND8_HFT_2022231.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("passenger_id", TypeName = "'int")]
         public override int Id { get; set; }
+        [Required]
         public string Name { get; set; }
-        [Required]
         public int TicketRow { get; set; }
-        [Required]
         public int TicketColumn { get; set; }
+        public int TicketPrice { get; set; }
         [NotMapped]
         public virtual Plane Plane { get; set; }
         [ForeignKey(nameof(Plane))]

@@ -58,12 +58,12 @@ namespace J25ND8_HFT_2022231.Repository.Data
             Plane plane5 = new Plane() { Id = 5, AirlineId=IzraelPlanes.Id, Destination ="Egypt", StartingCountry="Izrael", Type = "ATR 42/72", CalculatedTime ="4 hours and 48 minutes"};
             Plane plane6 = new Plane() { Id = 6, AirlineId=IzraelPlanes.Id, Destination ="Slovakia", StartingCountry="Izrael", Type = "Dash-8", CalculatedTime = "9 hours and 6 minutes"};
 
-            Passenger Sebastian = new Passenger() { Id=1, PlaneId=plane1.Id, Name="Franco Sebastian", TicketColumn = 3, TicketRow = 1};
-            Passenger Anna = new Passenger() { Id=2, PlaneId=plane4.Id, Name= "Anna Kournikova", TicketColumn = 2, TicketRow = 4};
-            Passenger Serena = new Passenger() { Id=3, PlaneId=plane2.Id, Name="Serena Williams", TicketColumn = 1, TicketRow = 20};
-            Passenger Benitez = new Passenger() { Id=4, PlaneId=plane3.Id, Name= "Wenceslao Benítez Inglott", TicketColumn = 5, TicketRow = 14};
-            Passenger Mohamed = new Passenger() { Id=5, PlaneId=plane5.Id, Name="Mohamed Salah", TicketColumn = 4, TicketRow = 7};
-            Passenger Hamsik = new Passenger() { Id=6, PlaneId=plane6.Id, Name= "Marek Hamšík", TicketColumn = 1, TicketRow = 8};
+            Passenger Sebastian = new Passenger() { Id=1, PlaneId=plane1.Id, Name="Franco Sebastian", TicketColumn = 3, TicketRow = 1, TicketPrice = 10000};
+            Passenger Anna = new Passenger() { Id=2, PlaneId=plane4.Id, Name= "Anna Kournikova", TicketColumn = 2, TicketRow = 4, TicketPrice = 8500};
+            Passenger Serena = new Passenger() { Id=3, PlaneId=plane2.Id, Name="Serena Williams", TicketColumn = 1, TicketRow = 20, TicketPrice = 6400};
+            Passenger Benitez = new Passenger() { Id=4, PlaneId=plane3.Id, Name= "Wenceslao Benítez Inglott", TicketColumn = 5, TicketRow = 14, TicketPrice = 14500};
+            Passenger Mohamed = new Passenger() { Id=5, PlaneId=plane5.Id, Name="Mohamed Salah", TicketColumn = 4, TicketRow = 7, TicketPrice = 1500};
+            Passenger Hamsik = new Passenger() { Id=6, PlaneId=plane6.Id, Name= "Marek Hamšík", TicketColumn = 1, TicketRow = 8, TicketPrice = 4500};
 
             modelBuilder.Entity<Airline>().HasData(AfganLine,TurkishAirline,IzraelPlanes);
             modelBuilder.Entity<Plane>().HasData(plane1, plane2, plane3, plane4, plane5, plane6);
