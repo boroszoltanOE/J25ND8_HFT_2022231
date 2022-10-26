@@ -51,12 +51,12 @@ namespace J25ND8_HFT_2022231.Repository.Data
             Airline TurkishAirline = new Airline() { Id = 2, Name ="TurkishAirline", BaseCountry = "Turkey", CreatingTime = new DateTime(2000,9,20), SafetyPoint = 9.8};
             Airline IzraelPlanes = new Airline() { Id = 3, Name ="IzraelPlanes", BaseCountry = "Izrael", CreatingTime = new DateTime(2020,1,1), SafetyPoint = 2.25};
 
-            Plane plane1 = new Plane() { Id = 1, AirlineId=AfganLine.Id, Destination ="New Zealand", StartingCountry="Afganistan", Type = "Douglas DC-8"};
-            Plane plane2 = new Plane() { Id = 2, AirlineId=AfganLine.Id, Destination ="USA", StartingCountry="Afganistan", Type = "Boeing 707"};
-            Plane plane3 = new Plane() { Id = 3, AirlineId=TurkishAirline.Id, Destination ="Canary Islands", StartingCountry="Turkey", Type = "Airbus A320"};
-            Plane plane4 = new Plane() { Id = 4, AirlineId=TurkishAirline.Id, Destination ="Russia", StartingCountry="Turkey", Type = "Bombardier CRJ700 series"};
-            Plane plane5 = new Plane() { Id = 5, AirlineId=IzraelPlanes.Id, Destination ="Egypt", StartingCountry="Izrael", Type = "ATR 42/72"};
-            Plane plane6 = new Plane() { Id = 6, AirlineId=IzraelPlanes.Id, Destination ="Slovakia", StartingCountry="Izrael", Type = "Dash-8"};
+            Plane plane1 = new Plane() { Id = 1, AirlineId=AfganLine.Id, Destination ="New Zealand", StartingCountry="Afganistan", Type = "Douglas DC-8", CalculatedTime ="13 hours and 54 minutes"};
+            Plane plane2 = new Plane() { Id = 2, AirlineId=AfganLine.Id, Destination ="USA", StartingCountry="Afganistan", Type = "Boeing 707", CalculatedTime = "25 hours and 32 minutes"};
+            Plane plane3 = new Plane() { Id = 3, AirlineId=TurkishAirline.Id, Destination ="Canary Islands", StartingCountry="Turkey", Type = "Airbus A320", CalculatedTime = "5 hours and 12 minutes"};
+            Plane plane4 = new Plane() { Id = 4, AirlineId=TurkishAirline.Id, Destination ="Russia", StartingCountry="Turkey", Type = "Bombardier CRJ700 series", CalculatedTime="21 hours and 4 minutes"};
+            Plane plane5 = new Plane() { Id = 5, AirlineId=IzraelPlanes.Id, Destination ="Egypt", StartingCountry="Izrael", Type = "ATR 42/72", CalculatedTime ="4 hours and 48 minutes"};
+            Plane plane6 = new Plane() { Id = 6, AirlineId=IzraelPlanes.Id, Destination ="Slovakia", StartingCountry="Izrael", Type = "Dash-8", CalculatedTime = "9 hours and 6 minutes"};
 
             Passenger Sebastian = new Passenger() { Id=1, PlaneId=plane1.Id, Name="Franco Sebastian", TicketColumn = 3, TicketRow = 1};
             Passenger Anna = new Passenger() { Id=2, PlaneId=plane4.Id, Name= "Anna Kournikova", TicketColumn = 2, TicketRow = 4};
