@@ -1,6 +1,7 @@
 ﻿using J25ND8_HFT_2022231.Logic.Interfaces;
 using J25ND8_HFT_2022231.Models;
 using J25ND8_HFT_2022231.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace J25ND8_HFT_2022231.Logic.Services
             planeRepo.Delete(id);
         }
 
+
         public Plane Read(int id)
         {
             return planeRepo.Read(id) ?? throw new ArgumentException("There is no plane with this id!");
@@ -40,6 +42,13 @@ namespace J25ND8_HFT_2022231.Logic.Services
         public void Update(Plane plane)
         {
             planeRepo.Update(plane);
+        }
+        //non-crud
+        //
+        public IEnumerable<KeyValuePair<string, ICollection<Passenger>>> CountOfPassengers()
+        {
+            return from x in planeRepo.ReadAll()
+                select new KeyValuePair<string, ICollection<Passenger>>(x.Type,x.Passengers);
         }
     }
 }
