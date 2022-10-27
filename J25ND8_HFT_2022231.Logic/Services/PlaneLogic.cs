@@ -44,11 +44,12 @@ namespace J25ND8_HFT_2022231.Logic.Services
             planeRepo.Update(plane);
         }
         //non-crud
-        //
-        public IEnumerable<KeyValuePair<string, ICollection<Passenger>>> CountOfPassengers()
+
+        public IEnumerable<KeyValuePair<string, double>> PlanesWithSafeAirlines()
         {
             return from x in planeRepo.ReadAll()
-                select new KeyValuePair<string, ICollection<Passenger>>(x.Type,x.Passengers);
+                   where x.Airline.SafetyPoint >= 5.0
+                   select new KeyValuePair<string, double>(x.Type,x.Airline.SafetyPoint);
         }
     }
 }

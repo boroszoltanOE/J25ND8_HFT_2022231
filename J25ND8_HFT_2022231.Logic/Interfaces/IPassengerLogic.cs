@@ -14,5 +14,7 @@ namespace J25ND8_HFT_2022231.Logic.Interfaces
         void Delete(int id);
         Passenger Read(int id);
         IEnumerable<Passenger> ReadAll();
+        //non-crud
+        IEnumerable<KeyValuePair<string, int>> AirlinesMostExpensiveTickets();
     }
 }

@@ -16,6 +16,8 @@ namespace J25ND8_HFT_2022231.Logic.Services
         {
             this.airlineRepo = airlineRepo;
         }
+
+
         public void Create(Airline airline)
         {
             airlineRepo.Create(airline);
@@ -40,6 +42,5 @@ namespace J25ND8_HFT_2022231.Logic.Services
         {
             airlineRepo.Update(airline);
         }
-
     }
 }
