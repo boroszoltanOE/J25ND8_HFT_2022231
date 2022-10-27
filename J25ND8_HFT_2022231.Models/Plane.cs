@@ -19,7 +19,7 @@ namespace J25ND8_HFT_2022231.Models
         public string Type { get; set; }
         public string StartingCountry { get; set; }
         public string Destination { get; set; }
-        public string CalculatedTime { get; set; }
+        public double CalculatedTime { get; set; }
         [NotMapped]
         public virtual ICollection<Passenger> Passengers { get; set; }
         public virtual Airline Airline { get; set; }

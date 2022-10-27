@@ -51,12 +51,12 @@ namespace J25ND8_HFT_2022231.Repository.Data
             Airline TurkishAirline = new Airline() { Id = 2, Name ="TurkishAirline", BaseCountry = "Turkey", CreatingTime = new DateTime(2000,9,20), SafetyPoint = 9.8};
             Airline IzraelPlanes = new Airline() { Id = 3, Name ="IzraelPlanes", BaseCountry = "Izrael", CreatingTime = new DateTime(2020,1,1), SafetyPoint = 2.25};
 
-            Plane pl1 = new Plane() { Id = 1, AirlineId=AfganLine.Id, Destination ="New Zealand", StartingCountry="Afganistan", Type = "Douglas DC-8", CalculatedTime ="13 hours and 54 minutes"};
-            Plane pl2 = new Plane() { Id = 2, AirlineId=AfganLine.Id, Destination ="USA", StartingCountry="Afganistan", Type = "Boeing 707", CalculatedTime = "25 hours and 32 minutes"};
-            Plane pl3 = new Plane() { Id = 3, AirlineId=TurkishAirline.Id, Destination ="Canary Islands", StartingCountry="Turkey", Type = "Airbus A320", CalculatedTime = "5 hours and 12 minutes"};
-            Plane pl4 = new Plane() { Id = 4, AirlineId=TurkishAirline.Id, Destination ="Russia", StartingCountry="Turkey", Type = "Bombardier CRJ700 series", CalculatedTime="21 hours and 4 minutes"};
-            Plane pl5 = new Plane() { Id = 5, AirlineId=IzraelPlanes.Id, Destination ="Egypt", StartingCountry="Izrael", Type = "ATR 42/72", CalculatedTime ="4 hours and 48 minutes"};
-            Plane pl6 = new Plane() { Id = 6, AirlineId=IzraelPlanes.Id, Destination ="Slovakia", StartingCountry="Izrael", Type = "Dash-8", CalculatedTime = "9 hours and 6 minutes"};
+            Plane pl1 = new Plane() { Id = 1, AirlineId=AfganLine.Id, Destination ="New Zealand", StartingCountry="Afganistan", Type = "Douglas DC-8", CalculatedTime =13.54};
+            Plane pl2 = new Plane() { Id = 2, AirlineId=AfganLine.Id, Destination ="USA", StartingCountry="Afganistan", Type = "Boeing 707", CalculatedTime = 25.32};
+            Plane pl3 = new Plane() { Id = 3, AirlineId=TurkishAirline.Id, Destination ="Canary Islands", StartingCountry="Turkey", Type = "Airbus A320", CalculatedTime = 5.12};
+            Plane pl4 = new Plane() { Id = 4, AirlineId=TurkishAirline.Id, Destination ="Russia", StartingCountry="Turkey", Type = "Bombardier CRJ700 series", CalculatedTime=21.4};
+            Plane pl5 = new Plane() { Id = 5, AirlineId=IzraelPlanes.Id, Destination ="Egypt", StartingCountry="Izrael", Type = "ATR 42/72", CalculatedTime =4.48};
+            Plane pl6 = new Plane() { Id = 6, AirlineId=IzraelPlanes.Id, Destination ="Slovakia", StartingCountry="Izrael", Type = "Dash-8", CalculatedTime = 9.6};
 
             Passenger pr1 = new Passenger() { Id=1, PlaneId=pl1.Id, Name="Franco Sebastian", TicketColumn = 3, TicketRow = 1, TicketPrice = 10000};
             Passenger pr2 = new Passenger() { Id=2, PlaneId=pl1.Id, Name="Distefano Bologna", TicketColumn = 1, TicketRow = 3, TicketPrice = 16500};
