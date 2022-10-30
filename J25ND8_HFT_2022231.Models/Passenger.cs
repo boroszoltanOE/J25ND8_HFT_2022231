@@ -20,6 +20,8 @@ namespace J25ND8_HFT_2022231.Models
         public int TicketRow { get; set; }
         public int TicketColumn { get; set; }
         public int TicketPrice { get; set; }
+        [Required]
+        public bool FirstClass { get; set; }
         [NotMapped]
         public virtual Plane Plane { get; set; }
         [ForeignKey(nameof(Plane))]
