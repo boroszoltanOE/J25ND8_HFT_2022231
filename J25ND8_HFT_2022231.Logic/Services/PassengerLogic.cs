@@ -47,5 +47,19 @@ namespace J25ND8_HFT_2022231.Logic.Services
                    group x by x.Plane.Airline.Name into g
                    select new KeyValuePair<string, int>(g.Key, g.Max(t => t.TicketPrice));
         }
+
+        public IEnumerable<KeyValuePair<string, double>> AVGTicketPricesPerAirlines()
+        {
+            return from x in passengerRepo.ReadAll()
+                   group x by x.Plane.Airline.Name into g
+                   select new KeyValuePair<string, double>(g.Key, Math.Round(g.Average(t => t.TicketPrice),0));
+        }
+
+        public IEnumerable<KeyValuePair<string, int>> CountOfSoldFirstClassTicketsPerAirlines()
+        {
+            return from x in passengerRepo.ReadAll()
+                   group x by x.Plane.Airline.Name into g
+                   select new KeyValuePair<string, int>(g.Key, g.Count(t => t.FirstClass.Equals(true)));
+        }
     }
 }

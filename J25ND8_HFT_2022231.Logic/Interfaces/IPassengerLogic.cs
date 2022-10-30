@@ -15,6 +15,11 @@ namespace J25ND8_HFT_2022231.Logic.Interfaces
         Passenger Read(int id);
         IEnumerable<Passenger> ReadAll();
         //non-crud
+            //Plane-Airline-Passenger
         IEnumerable<KeyValuePair<string, int>> AirlinesMostExpensiveTickets();
+            //Airline-Passenger
+        IEnumerable<KeyValuePair<string, double>> AVGTicketPricesPerAirlines();
+            //Plane-Passenger-Airline
+        IEnumerable<KeyValuePair<string, int>> CountOfSoldFirstClassTicketsPerAirlines();
     }
 }

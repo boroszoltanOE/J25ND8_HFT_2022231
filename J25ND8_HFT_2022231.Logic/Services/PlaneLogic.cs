@@ -51,5 +51,12 @@ namespace J25ND8_HFT_2022231.Logic.Services
                    where x.Airline.SafetyPoint >= 5.0
                    select new KeyValuePair<string, double>(x.Type,x.Airline.SafetyPoint);
         }
+
+        public IEnumerable<KeyValuePair<string, double>> LongestTravelsPerAirlines()
+        {
+            return from x in planeRepo.ReadAll()
+                   group x by x.Airline.Name into g
+                   select new KeyValuePair<string, double>(g.Key, g.Max(t => t.CalculatedTime));
+        }
     }
 }

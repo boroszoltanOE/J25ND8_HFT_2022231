@@ -17,6 +17,9 @@ namespace J25ND8_HFT_2022231.Logic.Interfaces
         Plane Read(int id);
 
         //non-crud
+            //Plane-Airline
         IEnumerable<KeyValuePair<string, double>> PlanesWithSafeAirlines();
+            //Plane-Airline
+        IEnumerable<KeyValuePair<string, double>> LongestTravelsPerAirlines();
     }
 }
