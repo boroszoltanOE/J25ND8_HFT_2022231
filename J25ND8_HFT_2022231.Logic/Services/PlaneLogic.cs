@@ -52,7 +52,7 @@ namespace J25ND8_HFT_2022231.Logic.Services
                    select new KeyValuePair<string, double>(x.Type,x.Airline.SafetyPoint);
         }
 
-        public IEnumerable<KeyValuePair<string, double>> LongestTravelsPerAirlines()
+        public IEnumerable<KeyValuePair<string,double>> LongestTravelsPerAirlines()
         {
             return from x in planeRepo.ReadAll()
                    group x by x.Airline.Name into g
