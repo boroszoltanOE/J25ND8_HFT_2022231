@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace J25ND8_HFT_2022231.Models
@@ -21,7 +22,9 @@ namespace J25ND8_HFT_2022231.Models
         public string Destination { get; set; }
         public double CalculatedTime { get; set; }
         [NotMapped]
+        [JsonIgnore]
         public virtual ICollection<Passenger> Passengers { get; set; }
+        [JsonIgnore]
         public virtual Airline Airline { get; set; }
         [ForeignKey(nameof(Airline))]
         public int AirlineId { get; set; }

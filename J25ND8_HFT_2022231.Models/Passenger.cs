@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace J25ND8_HFT_2022231.Models
@@ -23,6 +24,7 @@ namespace J25ND8_HFT_2022231.Models
         [Required]
         public bool FirstClass { get; set; }
         [NotMapped]
+        [JsonIgnore]
         public virtual Plane Plane { get; set; }
         [ForeignKey(nameof(Plane))]
         public int PlaneId { get; set; }
