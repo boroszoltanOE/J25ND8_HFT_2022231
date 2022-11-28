@@ -6,7 +6,7 @@ using System.ComponentModel;
 
 namespace J25ND8_HFT_2022231.Endpoint.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class PassengerController : ControllerBase
     {

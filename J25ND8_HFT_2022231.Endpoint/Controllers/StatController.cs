@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace J25ND8_HFT_2022231.Endpoint.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("[controller]/[action]")]
     [ApiController]
     public class StatController : ControllerBase
     {
