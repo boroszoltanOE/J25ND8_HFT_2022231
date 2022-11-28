@@ -10,12 +10,13 @@ namespace J25ND8_HFT_2022231.Client
     {
         public static void ToConsole<T>(this IEnumerable<T> input, string str)
         {
-            Console.WriteLine($"******** BEGIN - {str} ********");
+            Console.WriteLine($"******** BEGIN - {str} ********\n");
+            int counter = 1;
             foreach (T item in input)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine($"\t{counter++}.\t-\t"+ item.ToString());
             }
-            Console.WriteLine($"******** END - {str} ********");
+            Console.WriteLine($"\n******** END - {str} ********");
         }
     }
     public class Program
