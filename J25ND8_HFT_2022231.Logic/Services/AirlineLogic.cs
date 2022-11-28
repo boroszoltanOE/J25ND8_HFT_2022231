@@ -20,7 +20,15 @@ namespace J25ND8_HFT_2022231.Logic.Services
 
         public void Create(Airline airline)
         {
-            airlineRepo.Create(airline);
+            if (airline.Name == null)
+            {
+                throw new ArgumentException("Name can't be null!");
+            }
+            else
+            {
+                airlineRepo.Create(airline);
+            }
+            
         }
 
         public void Delete(int id)

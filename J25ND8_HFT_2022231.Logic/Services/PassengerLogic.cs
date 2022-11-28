@@ -19,7 +19,14 @@ namespace J25ND8_HFT_2022231.Logic.Services
 
         public void Create(Passenger passenger)
         {
-            passengerRepo.Create(passenger);
+            if (passenger.Name == null)
+            {
+                throw new ArgumentNullException("Name can't be null!");
+            }
+            else
+            {
+                passengerRepo.Create(passenger);
+            }
         }
 
         public void Delete(int id)

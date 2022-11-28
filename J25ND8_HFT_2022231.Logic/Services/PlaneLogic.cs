@@ -20,7 +20,14 @@ namespace J25ND8_HFT_2022231.Logic.Services
 
         public void Create(Plane plane)
         {
-            planeRepo.Create(plane);
+            if (plane.Type == null)
+            {
+                throw new ArgumentNullException("Type can't be null!");
+            }
+            else
+            {
+                planeRepo.Create(plane);
+            }
         }
 
         public void Delete(int id)
