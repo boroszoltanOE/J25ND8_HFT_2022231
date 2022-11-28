@@ -165,5 +165,11 @@ namespace J25ND8_HFT_2022231.Test
             mockPassengerRepository
                 .Verify(r => r.Delete(It.IsAny<int>()), Times.Once);
         }
+        [Test]
+        public void Create()
+        {
+            var result = new Passenger() { Id = 3, Name = null};
+            mockPassengerRepository.Verify(m => m.Create(result), Times.Never());
+        }
     }
 }

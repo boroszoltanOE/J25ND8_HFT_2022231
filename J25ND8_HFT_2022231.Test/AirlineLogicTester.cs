@@ -39,13 +39,10 @@ namespace J25ND8_HFT_2022231.Test
             al = new AirlineLogic(mockAirlineRepository.Object);
         }
         [Test]
-        public void Create()
+        public void CreateInValid()
         {
-            var expected = new Airline() { Id = 3, Name = "KazahstanAirline", BaseCountry = "Kazahstan" };
-            
-            al.Create(expected);
-
-            mockAirlineRepository.Verify(m =>m.Create(expected),Times.Once());
+            var airline = new Airline() { Id = 3, Name = null, BaseCountry = "Kazahstan" };
+            mockAirlineRepository.Verify(m =>m.Create(airline),Times.Never());
         }
         [Test]
         public void Delete()

@@ -97,5 +97,11 @@ namespace J25ND8_HFT_2022231.Test
             mockPlaneRepository
                 .Verify(r => r.Delete(It.IsAny<int>()), Times.Once);
         }
+        [Test]
+        public void Create()
+        {
+            var result = new Plane() { Id=10, Type=null };
+            mockPlaneRepository.Verify(m => m.Create(result), Times.Never());
+        }
     }
 }
