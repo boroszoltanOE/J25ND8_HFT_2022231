@@ -5,6 +5,7 @@ using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -45,7 +46,10 @@ namespace J25ND8_HFT_2022231.Repository.Repositories
             var updateNeed = Read(item.Id);
             foreach (var property in updateNeed.GetType().GetProperties())
             {
-                property.SetValue(updateNeed, property.GetValue(item));
+                if (property.GetAccessors().FirstOrDefault(t => t.IsVirtual) == null)
+                {
+                    property.SetValue(updateNeed, property.GetValue(item));
+                }
             }
             ctx.SaveChanges();
         }
